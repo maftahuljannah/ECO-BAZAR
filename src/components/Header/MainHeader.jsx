@@ -8,7 +8,7 @@ import { IoPersonOutline } from "react-icons/io5";
 
 const MainHeader = () => {
   return (
-    <nav className='bg-white py-[28.5px] shadow-2xl'>
+    <nav className='bg-white py-[28.5px] shadow-xl'>
       <div className="container grid lg:grid-cols-5 items-center">
         
         {/* Left menu */}
