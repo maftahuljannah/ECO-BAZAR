@@ -1,22 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const PrimaryMenu = () => {
-  const [menus] = useState([
-    { id: 1, name: 'Home', path: '/' },
+  const [menus, setMenus] = useState([
+    { id: 1, name: "Home", path: "/" },
     {
       id: 2,
-      name: 'Shop',
-      path: '/shop',
-      subMenus: [
-        { id: 3, name: 'Men', path: '/men' },
-        { id: 4, name: 'Women', path: '/women' },
-        { id: 5, name: 'Children', path: '/children' },
-      ],
+      name: "Shop",
+      path: "/shop",
+      subMenus: null,
     },
-    { id: 6, name: 'Blogs', path: '/blogs' },
-    { id: 7, name: 'Contact', path: '/contact' },
+    { id: 3, name: "Blogs", path: "/blogs" },
+    { id: 4, name: "Contact", path: "/contact" },
   ]);
+
+  useEffect(() => {
+    fetch('https://dummyjson.com/products/categories')
+      .then(res => res.json())
+      .then(res => {
+        const subMenus = res.map((category, index) => ({
+          id: index,
+          name: category,
+          path: `/shop/${category}`,
+        }));
+
+        const newMenus = [...menus];
+        newMenus[1].subMenus = res;
+        setMenus(newMenus);
+      });
+  }, []);
 
   return (
     <ul className="primaryMenu lg:flex gap-7">
@@ -29,13 +41,12 @@ const PrimaryMenu = () => {
             {menu.name}
           </NavLink>
 
-          {/* If menu has subMenus, render them */}
           {menu.subMenus && (
             <ul className="subMenu group-hover:opacity-100 group-hover:visible mt-5 group-hover:mt-0 transition-all duration-200 opacity-0 invisible absolute z-10 bg-white border border-gray-300 py-4 px-5 min-w-[200px]">
               {menu.subMenus.map((sub) => (
-                <li key={sub.id} className="my-2">
+                <li key={sub.slug} className="my-2">
                   <NavLink
-                    to={sub.path}
+                    to={sub.slug}
                     className="hover:text-branding-success text-sm font-medium text-gray-400 hover:pl-2 transition-all duration-150"
                   >
                     {sub.name}
