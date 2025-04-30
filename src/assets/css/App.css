@@ -2,8 +2,12 @@
 
 body{
   font-family: 'Poppins', sans-serif;
+  overflow:hidden
 }
 
 .primaryMenu a.active{
 color: var(--color-branding-success);
 }
+
+
+
