@@ -2,12 +2,60 @@
 
 body{
   font-family: 'Poppins', sans-serif;
-  overflow:hidden
 }
 
 .primaryMenu a.active{
 color: var(--color-branding-success);
 }
 
+.bannerBg{
+  background-image: url(/public/images/BG.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.prevArrow,
+.nextArrow{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 45px;
+height: 45px;
+border-radius: 50%;
+background-color: white;
+font-size: 20px;
+border: 1px solid var(--color-gray-400);
+align-items: center;
+justify-content: center;
+cursor: pointer;
+z-index: 100;
+}
+.prevArrow:hover,
+.nextArrow:hover{
+  background-color: var(--color-branding-success);
+  color: #fff;
+  border: var(--color-branding-success);
+}
+.prevArrow{
+  left: 50px;
+}
+.nextArrow{
+  right: 50px;
+}
 
+.swiper-pagination-bullet{
+  background-color: var(--color-gren-gray-scale-200) !important;
+  opacity: 1 !important;
+}
 
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background-color: var(--color-branding-success) !important;
+  width: 30px;
+  height: 10px;
+  border-radius: 20px;
+}
+.bg-icon-bg {
+  background-image: url("/images/bgIcon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

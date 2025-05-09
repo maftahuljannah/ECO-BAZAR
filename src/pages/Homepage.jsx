@@ -1,10 +1,15 @@
 import React from 'react'
+import Banner from '../components/Banner/Banner'
+import PaymentCard from '../components/PaymentCard'
+import Featured from '../components/Featured/Featured'
 
 const Homepage = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+     <Banner/> 
+     <PaymentCard/>
+     <Featured/>
+    </>
   )
 }
 

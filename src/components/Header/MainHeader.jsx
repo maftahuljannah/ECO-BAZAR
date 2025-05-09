@@ -8,7 +8,14 @@ import Search from '../utils/Search';
 import { IoMdMenu } from "react-icons/io";
 import OffCanvas from '../utils/OffCanvas';
 import Cart from '../utils/cart';
+import LoginForm from '../utils/LoginForm';
+
+
 const MainHeader = () => {
+
+  const [showPersonPanel, setShowPersonPanel] = useState(false);
+
+
   const [showMenu, setShowMenu] = useState(false);
 
   const showMobileNav = () => {
@@ -63,8 +70,25 @@ const MainHeader = () => {
           <ul className="flex items-center gap-4 text-2xl lg:text-3xl relative">
             <li><Search /></li>
             <li className='hidden lg:inline-block'><Link><FiHeart /></Link></li>
-            <li><Cart /></li> {/* ✅ Cart Component added here */}
-            <li className='hidden lg:inline-block'><Link><IoPersonOutline /></Link></li>
+            <li><Cart /></li>
+
+            <li className='hidden lg:inline-block'>
+  <button onClick={() => setShowPersonPanel(true)}>
+    <IoPersonOutline />
+  </button>
+
+  {/* Offcanvas */}
+  <OffCanvas
+  position='right'
+  hideSideBar={() => setShowPersonPanel(false)}
+  showSideBar={showPersonPanel}
+  heading='My Account'
+>
+  <LoginForm />
+</OffCanvas>
+</li>
+
+
           </ul>
         </div>
       </div>

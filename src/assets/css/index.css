@@ -40,3 +40,9 @@
 .container{
   @apply mx-auto;
 }
+
+.btn {
+  @apply font-semibold text-sm lg:text-[16px] leading-[120%] text-white bg-branding-success
+  lg:rounded-[53px] rounded-sm lg:px-10 lg:py-4 px-3 py-4 inline-flex items-center gap-2
+  transition-all duration-300 ease-in-out hover:bg-branding-success-dark;
+}
