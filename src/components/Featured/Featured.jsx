@@ -28,7 +28,12 @@ const Featured = () => {
             />
           ))}
         </div>
+
+         <div className="leaf">
+  <img src="/public/images/leaf.png" alt="" />
+</div>
       </div>
+     
     </section>
   )
 }

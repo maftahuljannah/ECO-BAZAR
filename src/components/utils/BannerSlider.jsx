@@ -26,7 +26,7 @@ Organic Food</h2>
 
 </div>
 
-<div className="leafImg hidden lg:block absolute -bottom-10 right-50">
+<div className="leafImg hidden lg:block absolute -bottom-8 right-50 z-50">
   <img src="/public/images/Top.png" alt="" />
 </div>
 
