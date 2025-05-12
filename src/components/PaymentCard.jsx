@@ -6,7 +6,7 @@ import { BsBox } from "react-icons/bs";
 
 const PaymentCard = () => {
   return (
-    <section className="mt-20">
+    <section className="mt-20 relative">
       <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
 
         {/* CARD 1 */}
@@ -50,6 +50,11 @@ const PaymentCard = () => {
         </div>
 
       </div>
+<div className="leafImg hidden lg:block absolute -top-[160px] right-[150px] z-50">
+  <img src="/public/images/Top.png" alt="" />
+</div>
+
+
     </section>
   );
 };

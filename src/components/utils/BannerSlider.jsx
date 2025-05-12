@@ -6,7 +6,7 @@ const BannerSlider = () => {
   return (
     <div className=' lg:h-[640px] bannerBg bg-gren-gray-scale-50'>
     
-<div className="container relative  grid lg:grid-cols-2 h-full items-center py-8">
+<div className="container  grid lg:grid-cols-2 h-full items-center py-8">
 
 
 <div className="banner-img">
@@ -25,11 +25,6 @@ Organic Food</h2>
     </div>
 
 </div>
-
-<div className="leafImg hidden lg:block absolute -bottom-8 right-50 z-50">
-  <img src="/public/images/Top.png" alt="" />
-</div>
-
 
     </div>
   )
