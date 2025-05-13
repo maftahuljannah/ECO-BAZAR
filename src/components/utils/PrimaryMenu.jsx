@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { setProductCategory } from '../../slicer/categorySlice';
 
 const PrimaryMenu = () => {
   const [menus, setMenus] = useState([
@@ -14,6 +16,10 @@ const PrimaryMenu = () => {
     { id: 4, name: "Contact", path: "/contact" },
   ]);
 
+ const dispatch = useDispatch();
+
+
+
   useEffect(() => {
     fetch('https://dummyjson.com/products/categories')
       .then(res => res.json())
@@ -27,6 +33,7 @@ const PrimaryMenu = () => {
         const newMenus = [...menus];
         newMenus[1].subMenus = res;
         setMenus(newMenus);
+        dispatch(setProductCategory(res));
       });
   }, []);
 
