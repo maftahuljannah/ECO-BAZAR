@@ -9,7 +9,7 @@ color: var(--color-branding-success);
 }
 
 .bannerBg{
-  background-image: url(/public/images/BG.png);
+  background-image: url(/images/BG.png);
  background-repeat: no-repeat;
  background-size: cover;
 }
@@ -57,5 +57,26 @@ z-index: 100;
   background-image: url("/images/bgIcon.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+}
+#topCategory{
+  background-image: url("/images/bg-3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+
+#organicFood{
+  background-image: url("/images/bg-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.counterBg{
+  background-image: url("/images/countBG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.breadcrumb{
+  background-image: url("/images/breadcrum.png");
+  background-repeat: no-repeat;
   background-size: cover;
 }

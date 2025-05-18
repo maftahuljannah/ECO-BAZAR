@@ -4,6 +4,9 @@ import PaymentCard from '../components/PaymentCard'
 import Featured from '../components/Featured/Featured'
 import ProductGrid from '../components/Featured/ProductGrid'
 import Categories from '../components/categories/Categories'
+import OrganicFood from '../components/organicFood/OrganicFood'
+import Counter from '../components/Counter'
+import CategoryTypes from './CategoryTypes'
 
 const Homepage = () => {
   return (
@@ -13,6 +16,8 @@ const Homepage = () => {
      <ProductGrid/>
      <Featured limit={4}/>
      <Categories/>
+     <OrganicFood/>
+     <Counter/>
     </>
   )
 }

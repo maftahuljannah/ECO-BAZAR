@@ -53,7 +53,7 @@ const PrimaryMenu = () => {
               {menu.subMenus.map((sub) => (
                 <li key={sub.slug} className="my-2">
                   <NavLink
-                    to={sub.slug}
+                    to={`/categorytype/${sub.slug}`}
                     className="hover:text-branding-success text-sm font-medium text-gray-400 hover:pl-2 transition-all duration-150"
                   >
                     {sub.name}
