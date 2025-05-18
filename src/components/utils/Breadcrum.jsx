@@ -6,7 +6,7 @@ const Breadcrum = ({url, title}) => {
   return (
     <div className='breadcrumb py-[48px]'>
      <div className="container text-white flex items-center ">
-     <Link to='/'> Home </Link>
+     <Link to='/'> Homepage </Link>
       <MdKeyboardArrowRight />
       <Link to={url} className='text-branding-success capitalize'>{title}</Link>
 
