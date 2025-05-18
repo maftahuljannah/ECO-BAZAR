@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import Search from '../utils/Search';
 import { IoMdMenu } from "react-icons/io";
 import OffCanvas from '../utils/OffCanvas';
-import Cart from '../utils/cart';
+import Cart from '../utils/Cart';
 import LoginForm from '../utils/LoginForm';
 
 
