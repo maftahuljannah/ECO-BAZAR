@@ -4,21 +4,20 @@ import { SlHandbag } from "react-icons/sl";
 import Rating from '../utils/Rating';
 import { IoHeartOutline, IoEyeOutline } from "react-icons/io5";
 
-const ProductCard = ({ title, price, oldPrice, image, discountPercentage }) => {
+const ProductCard = ({ id, title, price, oldPrice, image, discountPercentage }) => {
   return (
     <div className='productCard group border border-gray-300 rounded-lg hover:border-branding-success transition-all overflow-hidden relative'>
       <div className="productThumble relative">
-        <Link to="#">
+        <Link to={`/product/${id}`}>
           <p className='bg-branding-error text-white py-[3px] px-[6px] text-sm inline-block rounded-sm top-4 left-4 absolute'>
             Save {Math.round(discountPercentage)}%
           </p>
-          
           <img loading='lazy' src={image} className='max-w-full mx-auto bg-white' alt={title} />
         </Link>
       </div>
 
       <div className="productCnt relative p-4">
-        <Link to="#" className="text-gray-scale-gray-700 text-sm font-normal leading-tight block">
+        <Link to={`/product/${id}`} className="text-gray-scale-gray-700 text-sm font-normal leading-tight block">
           {title}
         </Link>
         <p className="text-gray-scale-gray-900 text-[16px] font-medium leading-normal mt-2">

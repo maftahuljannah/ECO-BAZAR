@@ -80,3 +80,8 @@ z-index: 100;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.swiper-slide-thumb-active img{
+  opacity:1;
+  transition: 0.3s opacity;
+  outline: 3px solid var(--color-branding-success);
+}

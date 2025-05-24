@@ -7,6 +7,7 @@ import Shop from './pages/Shop';
 import Contact from './pages/Contact';
 import Blogs from './pages/Blogs';
 import CategoryTypes from './pages/CategoryTypes';
+import SingleProduct from './pages/SingleProduct';
 
 const App = () => {
   return (
@@ -18,6 +19,8 @@ const App = () => {
 <Route path="/blogs" element={<Blogs />} />
 <Route path="/contact" element={<Contact />} />
 <Route path="/categorytype/:name" element={<CategoryTypes/>}/>
+<Route path="/product/:id" element={<SingleProduct />} />
+
     </Route>
    </Routes>
    </BrowserRouter>

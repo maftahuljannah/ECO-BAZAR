@@ -20,6 +20,7 @@ const Featured = ({ limit = 4 }) => {
           {feature.map(product => (
             <ProductCard
             key={product.id}
+            id={product.id}
            title={product.title}
            price={product.price}
            oldPrice={product.price / (1 - product.discountPercentage / 100)}
