@@ -8,7 +8,6 @@ import Search from '../utils/Search';
 import { IoMdMenu } from "react-icons/io";
 import OffCanvas from '../utils/OffCanvas';
 import Cart from '../utils/Cart';
-import LoginForm from '../utils/LoginForm';
 
 
 const MainHeader = () => {
@@ -73,19 +72,7 @@ const MainHeader = () => {
             <li><Cart /></li>
 
             <li className='hidden lg:inline-block'>
-  <button onClick={() => setShowPersonPanel(true)}>
-    <IoPersonOutline />
-  </button>
-
-  {/* Offcanvas */}
-  <OffCanvas
-  position='right'
-  hideSideBar={() => setShowPersonPanel(false)}
-  showSideBar={showPersonPanel}
-  heading='My Account'
->
-  <LoginForm />
-</OffCanvas>
+   <Link to='/login'> <IoPersonOutline /></Link>
 </li>
 
 

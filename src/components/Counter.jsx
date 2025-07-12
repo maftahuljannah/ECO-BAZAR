@@ -20,7 +20,12 @@ const Counter = () => {
           <img src="/images/countObj-2.png" alt="" className="w-24 sm:w-32" />
         </div>
       </div>
+
     </div>
+
+
+
+
   );
 };
 

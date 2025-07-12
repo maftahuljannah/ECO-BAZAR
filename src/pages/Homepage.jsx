@@ -6,7 +6,8 @@ import ProductGrid from '../components/Featured/ProductGrid'
 import Categories from '../components/categories/Categories'
 import OrganicFood from '../components/organicFood/OrganicFood'
 import Counter from '../components/Counter'
-import CategoryTypes from './CategoryTypes'
+import Sales from '../components/Sales'
+
 
 const Homepage = () => {
   return (
@@ -18,6 +19,7 @@ const Homepage = () => {
      <Categories/>
      <OrganicFood/>
      <Counter/>
+     <Sales/>
     </>
   )
 }
