@@ -23,7 +23,7 @@ const Footer = () => {
                 placeholder="Your email address"
                 className="w-full sm:w-80 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
               />
-              <button className="bg-green-600 hover:bg-green-800 text-white px-6 py-2 rounded-full text-sm font-semibold">
+              <button className="bg-branding-success hover:bg-green-800 text-white px-6 py-2 rounded-full text-sm font-semibold">
                 Subscribe
               </button>
 

@@ -15,6 +15,8 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./Firebase";
 import { useDispatch } from 'react-redux';
 import { setAuthUser } from './slicer/UserSlice';
+import WishList from './components/WishList.jsx';
+import Scart from './components/Scart.jsx';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -46,7 +48,9 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/scart" element={<Scart />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/wishlist" element={<WishList />} />
           <Route path="/categorytype/:name" element={<CategoryTypes />} />
           <Route path="/product/:id" element={<SingleProduct />} />
         </Route>
