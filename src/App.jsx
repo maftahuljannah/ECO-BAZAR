@@ -17,6 +17,7 @@ import { useDispatch } from 'react-redux';
 import { setAuthUser } from './slicer/UserSlice';
 import WishList from './components/WishList.jsx';
 import Scart from './components/Scart.jsx';
+import CheckOut from './components/CheckOut.jsx';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -51,6 +52,7 @@ const App = () => {
           <Route path="/scart" element={<Scart />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/wishlist" element={<WishList />} />
+           <Route path="/checkout" element={<CheckOut />} />
           <Route path="/categorytype/:name" element={<CategoryTypes />} />
           <Route path="/product/:id" element={<SingleProduct />} />
         </Route>

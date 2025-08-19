@@ -39,6 +39,11 @@ const ShopMenu = () => {
                   Shopping-cart
                 </Link>
               </li>
+                <li>
+                <Link to="/checkout" className="block px-4 py-2 hover:bg-gray-100">
+                  Checkout
+                </Link>
+              </li>
             </ul>
           </li>
 
